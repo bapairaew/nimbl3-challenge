@@ -1,0 +1,14 @@
+@import 'app/stylesheet/variables';
+
+.container {
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $brand-primary-light;
+  border-top: 1px solid transparentize($brand-primary-dark, 0.8);
+  padding: 70px 0;
+  margin-top: auto !important;
+}

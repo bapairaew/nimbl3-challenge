@@ -1,0 +1,8 @@
+@import 'app/stylesheet/variables';
+
+.nav {
+  background: $brand-primary;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}

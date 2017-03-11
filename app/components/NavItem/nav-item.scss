@@ -1,0 +1,30 @@
+@import 'app/stylesheet/variables';
+
+$decoration-height:     40px;
+
+.navitem {
+  &:global(.active) {
+    box-shadow: 0 -1px 0 0 $brand-primary-dark, 0 1px 0 0 $brand-primary-dark;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top: -$decoration-height / 2;
+      width: 6px;
+      height: $decoration-height;
+      background-color: $brand-success;
+      border-radius: 0 17px 17px 0;
+      z-index: 9;
+    }
+  }
+
+  .container {
+    display: flex;
+    margin-left: 15px;
+  }
+
+  .icon {
+    margin-right: 18px;
+  }
+}

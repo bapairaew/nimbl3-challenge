@@ -1,0 +1,10 @@
+@import 'app/stylesheet/variables';
+
+.container {
+  text-align: center;
+  background-color: $brand-primary-dark;
+
+  .logo {
+    margin: 10px;
+  }
+}

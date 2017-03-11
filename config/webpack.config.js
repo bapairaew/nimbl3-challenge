@@ -52,6 +52,12 @@ module.exports = {
       include: CONFIG.APP_ROOT,
       exclude: globalStyleSheetPath,
       use: createStyleModuleLoader(true)
+    }, {
+      test: /\.svg$/,
+      loader: 'svg-sprite-loader',
+      query: {
+        name: '[name]_[hash]'
+      }
     }]
   }
 };
