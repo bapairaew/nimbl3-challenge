@@ -1,0 +1,44 @@
+@import 'app/stylesheet/variables';
+@import 'app/stylesheet/mixins/media';
+
+.container {
+  flex: 0 0 100%;
+  background: rgba(0, 0, 0, .5);
+  display: none;
+
+  &.opened {
+    display: block;
+
+    .sidebar {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @include tablet {
+    flex: 0 0 $sidebar-minimized-width;
+    display: block;
+    &:hover {
+      flex: 0 0 $sidebar-width;
+    }
+  }
+
+  @include desktop {
+    flex: 0 0 $sidebar-width;
+    display: block;
+  }
+
+  .sidebar {
+    width: $sidebar-width;
+    transform: translate3d(-$sidebar-width, 0, 0);
+
+    @include tablet {
+      width: 100%;
+      transform: translate3d(0, 0, 0);
+    }
+
+    @include desktop {
+      width: 100%;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}

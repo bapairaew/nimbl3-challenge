@@ -1,0 +1,54 @@
+{
+  "name": "nimbl3",
+  "version": "1.0.0",
+  "description": "Nimbl3 technical test",
+  "main": "server",
+  "scripts": {
+    "start": "npm run clean:build && npm run copy:html && npm run watch",
+    "server": "node server",
+    "server:heroku": "node heroku/server",
+    "watch": "webpack -d --config config/webpack.config.js --watch",
+    "build": "npm run clean:build && npm run copy:html && webpack -p --config config/webpack.config.js",
+    "heroku": "npm run build && npm run copy:heroku",
+    "clean:build": "rm -rf build && mkdir build",
+    "copy:html": "cp app/index.html build/index.html",
+    "copy:heroku:build": "cp -R build/ heroku/build",
+    "copy:heroku:server": "cp -R server/ heroku/server",
+    "copy:heroku:public": "cp -R public/ heroku/public",
+    "copy:heroku:misc": "cp -R config/ heroku/config && cp package.json heroku/package.json && cp Procfile heroku/Procfile",
+    "copy:heroku": "npm run copy:heroku:build && npm run copy:heroku:server && npm run copy:heroku:public && npm run copy:heroku:misc"
+  },
+  "author": "Narudom Techaval",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.6",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "bootstrap-sass": "^3.3.7",
+    "classnames": "^2.2.5",
+    "css-loader": "^0.26.2",
+    "node-sass": "^4.5.0",
+    "postcss-loader": "^1.3.3",
+    "react": "^15.4.2",
+    "react-bootstrap": "^0.30.8",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.13.2",
+    "styled-components": "^1.4.3",
+    "webpack": "^2.2.1"
+  }
+}

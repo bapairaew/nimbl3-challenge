@@ -1,0 +1,11 @@
+@import './mixins/fontface';
+
+@at-root {
+  $sizes: ('Hairline', 'UltraLight', 'Light', 'Regular', 'Bold', 'SemiBold', 'ExtraBold', 'Black');
+
+  $i: 100;
+  @each $size in $sizes {
+    @include fontface('Montserrat', $size, $i);
+    $i: $i + 100;
+  }
+}
