@@ -41,7 +41,7 @@ const App = ({ user, order, isSidebarOpened, openSidebar, closeSidebar }) => (
         className={'visible-xs'}
         onMenuClick={openSidebar}
         onSearchClick={() => { console.log('Search clicked!') }}>
-        {order.id}
+        Edit {order.id}
       </AppBar>
       Hello World!
     </MainContainer>
