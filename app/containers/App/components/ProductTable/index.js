@@ -3,8 +3,8 @@ import styles from './product-table.scss';
 import classSet from 'classnames';
 import Icon from 'components/Icon';
 
-const renderProductRow = (product) => (
-  <tr>
+const renderProductRow = (product, index) => (
+  <tr key={index}>
     <td>{product.sku}</td>
     <td>{product.description}</td>
     <td>{product.brand}</td>
