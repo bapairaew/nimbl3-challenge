@@ -30,7 +30,13 @@ $decoration-height:     40px;
 
   .container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-left: 15px;
+  }
+
+  .mainContent {
+    flex-grow: 1;
   }
 
   .icon {
