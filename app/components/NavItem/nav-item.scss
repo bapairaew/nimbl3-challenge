@@ -1,4 +1,5 @@
 @import 'app/stylesheet/variables';
+@import 'app/stylesheet/mixins/media';
 
 $decoration-height:     40px;
 
@@ -13,9 +14,17 @@ $decoration-height:     40px;
       margin-top: -$decoration-height / 2;
       width: 6px;
       height: $decoration-height;
-      background-color: $brand-success;
+      background-color: $brand-warning;
       border-radius: 0 17px 17px 0;
       z-index: 9;
+
+      @include tablet {
+        background-color: $brand-success;
+      }
+
+      @include desktop {
+        background-color: $brand-success;
+      }
     }
   }
 
