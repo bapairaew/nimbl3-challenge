@@ -10,6 +10,12 @@ import NavMessage from 'components/NavMessage';
 import HelloMessage from 'components/HelloMessage';
 import AppBar from 'components/AppBar';
 import MainContainer from 'components/MainContainer';
+import Card from 'components/Card';
+import Company from 'components/Company';
+import Section from 'components/Section';
+import UpdateOrderForm from 'components/UpdateOrderForm';
+import CalculationCard from 'components/CalculationCard';
+import MainSection from 'components/MainSection';
 import Icon from 'components/Icon';
 import { select } from './reducer';
 import { openSidebar, closeSidebar } from './action';
@@ -43,7 +49,18 @@ const App = ({ user, order, isSidebarOpened, openSidebar, closeSidebar }) => (
         onSearchClick={() => { console.log('Search clicked!') }}>
         Edit {order.id}
       </AppBar>
-      Hello World!
+      <Card>
+        <Company {...order.company} />
+      </Card>
+      <Section>
+        <UpdateOrderForm {...order} />
+      </Section>
+      <Section>
+        <CalculationCard {...order} />
+      </Section>
+      <Section>
+        <MainSection {...order} />
+      </Section>
     </MainContainer>
   </div>
 );

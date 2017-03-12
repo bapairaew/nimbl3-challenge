@@ -4,11 +4,11 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk'
 import { Provider } from 'react-redux';
 
-import App from 'containers/App';
-import appReducer from 'containers/App/reducer';
-
 import 'stylesheet/bootstrap.scss';
 import 'stylesheet/fontface.scss';
+
+import App from 'containers/App';
+import appReducer from 'containers/App/reducer';
 
 const store = createStore(
   appReducer,

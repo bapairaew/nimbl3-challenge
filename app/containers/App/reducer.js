@@ -13,10 +13,13 @@ const initialState = {
     },
     createdBy: 'Tom Hanks',
     status: 'Pending',
-    estimatedDeliveryDate: new Date('14/04/2016'),
+    estimatedDeliveryDate: '14-04-2015',
     type: 'Retailers',
     phone: '+66 087 348 79 34',
-    total: 40033,
+    subTotal: 40033,
+    shipping: 0,
+    discount: 9999.999,
+    tax: 0.07,
     products: [
       {
         sku: 'TN SO 000015',
