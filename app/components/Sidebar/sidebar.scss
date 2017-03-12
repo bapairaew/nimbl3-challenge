@@ -8,6 +8,9 @@
 
   &.opened {
     display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
 
     .sidebar {
       transform: translate3d(0, 0, 0);
@@ -17,6 +20,11 @@
   @include tablet {
     flex: 0 0 $sidebar-minimized-width;
     display: block;
+
+    &.opened {
+      position: relative;
+    }
+
     &:hover {
       flex: 0 0 $sidebar-width;
     }
@@ -25,6 +33,10 @@
   @include desktop {
     flex: 0 0 $sidebar-width;
     display: block;
+
+    &.opened {
+      position: relative;
+    }
   }
 
   .sidebar {

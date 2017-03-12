@@ -43,6 +43,7 @@ const App = ({ user, order, isSidebarOpened, openSidebar, closeSidebar }) => (
         onSearchClick={() => { console.log('Search clicked!') }}>
         {order.id}
       </AppBar>
+      Hello World!
     </MainContainer>
   </div>
 );
