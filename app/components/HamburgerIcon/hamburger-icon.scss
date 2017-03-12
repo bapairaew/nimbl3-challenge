@@ -1,0 +1,16 @@
+@import 'app/stylesheet/variables';
+
+.container {
+  width: 19px;
+  height: 17px;
+
+  .bar {
+    height: 2px;
+    width: 100%;
+    background-color: $menu-icon-color;
+
+    &:not(:first-child) {
+      margin-top: 5px;
+    }
+  }
+}

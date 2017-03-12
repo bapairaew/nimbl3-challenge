@@ -8,11 +8,13 @@ import NavHeader from 'components/NavHeader';
 import NavFooter from 'components/NavFooter';
 import NavMessage from 'components/NavMessage';
 import HelloMessage from 'components/HelloMessage';
+import AppBar from 'components/AppBar';
+import MainContainer from 'components/MainContainer';
 import Icon from 'components/Icon';
 import { select } from './reducer';
 import { openSidebar, closeSidebar } from './action';
 
-const App = ({ user, isSidebarOpened, openSidebar, closeSidebar }) => (
+const App = ({ user, order, isSidebarOpened, openSidebar, closeSidebar }) => (
   <div className={styles.container}>
     <Sidebar isOpened={isSidebarOpened} onClosed={closeSidebar}>
       <Nav bsStyle="pills" stacked activeKey={2} onSelect={index => { console.log(`${index} has been selected.`); }}>
@@ -34,9 +36,14 @@ const App = ({ user, isSidebarOpened, openSidebar, closeSidebar }) => (
         <NavFooter />
       </Nav>
     </Sidebar>
-    <div>
-      <button onClick={openSidebar}>Open</button>
-    </div>
+    <MainContainer>
+      <AppBar
+        className={'visible-xs'}
+        onMenuClick={openSidebar}
+        onSearchClick={() => { console.log('Search clicked!') }}>
+        {order.id}
+      </AppBar>
+    </MainContainer>
   </div>
 );
 

@@ -1,0 +1,10 @@
+.button {
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+}
