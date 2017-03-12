@@ -3,8 +3,8 @@
 .container {
   text-align: center;
   background-color: $brand-primary-dark;
-
-  .logo {
-    margin: 10px;
-  }
+  height: $header-height;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }
