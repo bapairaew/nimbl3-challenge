@@ -8,7 +8,7 @@ import AutoSuggest from '../AutoSuggest';
 import classSet from 'classnames';
 
 const MainSection = ({ products }) => (
-  <div>
+  <div className={styles.container}>
     <div className={styles.subSection}>
       <Card>
         <AutoSuggest />
