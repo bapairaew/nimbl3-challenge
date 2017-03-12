@@ -1,7 +1,11 @@
 import * as CONSTANTS from './constants';
 
 const initialState = {
-  isSidebarOpened: false
+  user: {
+    name: 'Somchai',
+    company: 'Twin Types Corporation'
+  },
+  isSidebarOpened: true
 };
 
 export default function (state = initialState, action) {

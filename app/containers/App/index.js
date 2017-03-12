@@ -6,15 +6,20 @@ import Nav from 'components/Nav';
 import NavItem from 'components/NavItem';
 import NavHeader from 'components/NavHeader';
 import NavFooter from 'components/NavFooter';
+import NavMessage from 'components/NavMessage';
+import HelloMessage from 'components/HelloMessage';
 import Icon from 'components/Icon';
 import { select } from './reducer';
 import { openSidebar, closeSidebar } from './action';
 
-const App = ({ isSidebarOpened, openSidebar, closeSidebar }) => (
+const App = ({ user, isSidebarOpened, openSidebar, closeSidebar }) => (
   <div className={styles.container}>
     <Sidebar isOpened={isSidebarOpened} onClosed={closeSidebar}>
       <Nav bsStyle="pills" stacked activeKey={2} onSelect={index => { console.log(`${index} has been selected.`); }}>
         <NavHeader />
+        <NavMessage className={'visible-xs'}>
+          <HelloMessage {...user} />
+        </NavMessage>
         <NavItem icon={'Controls'} eventKey={1}>Dashboard</NavItem>
         <NavItem icon={'ShoppingCart'} eventKey={2}>Orders</NavItem>
         <NavItem icon={'Factory'} eventKey={3}>Companies</NavItem>
