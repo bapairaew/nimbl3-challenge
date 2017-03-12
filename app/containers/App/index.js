@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import styles from './app.scss';
 import Sidebar from 'components/Sidebar';
 import Nav from 'components/Nav';
@@ -6,10 +7,12 @@ import NavItem from 'components/NavItem';
 import NavHeader from 'components/NavHeader';
 import NavFooter from 'components/NavFooter';
 import Icon from 'components/Icon';
+import { select } from './reducer';
+import { openSidebar, closeSidebar } from './action';
 
-const App = () => (
+const App = ({ isSidebarOpened, openSidebar, closeSidebar }) => (
   <div className={styles.container}>
-    <Sidebar>
+    <Sidebar isOpened={isSidebarOpened} onClosed={closeSidebar}>
       <Nav bsStyle="pills" stacked activeKey={2} onSelect={index => { console.log(`${index} has been selected.`); }}>
         <NavHeader />
         <NavItem icon={'Controls'} eventKey={1}>Dashboard</NavItem>
@@ -26,8 +29,19 @@ const App = () => (
         <NavFooter />
       </Nav>
     </Sidebar>
-    <div style={{ height: 1400 }}></div>
+    <div>
+      <button onClick={openSidebar}>Open</button>
+    </div>
   </div>
 );
 
-export default App;
+const mapStateToProps = state => select(state);
+
+function mapDispatchToProps(dispatch) {
+  return {
+    openSidebar: () => dispatch(openSidebar()),
+    closeSidebar: () => dispatch(closeSidebar()),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
