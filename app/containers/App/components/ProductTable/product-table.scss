@@ -11,6 +11,10 @@
     overflow: hidden;
     table-layout: fixed;
 
+    > tbody > tr:nth-child(even) {
+      background-color: $row-alt-bg;
+    }
+
     > thead > tr > th,
     > tbody > tr > td {
       padding: 20px;

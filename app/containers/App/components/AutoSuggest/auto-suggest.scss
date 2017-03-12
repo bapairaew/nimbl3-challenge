@@ -55,6 +55,10 @@ $lineHeight: 32px;
         justify-content: space-between;
         border-bottom: 1px solid $table-border-color;
 
+        &:nth-child(even) {
+          background-color: $row-alt-bg;
+        }
+
         > div {
           font-size: 11px;
           line-height: 14px;
