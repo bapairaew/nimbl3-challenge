@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './card.scss';
+import classSet from 'classnames';
 
-const Card = ({ children }) => (
-  <div className={styles.card}>
+const Card = ({ className, children }) => (
+  <div className={classSet(styles.card, className)}>
     {children}
   </div>
 );

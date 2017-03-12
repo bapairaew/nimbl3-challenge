@@ -18,11 +18,7 @@ $decoration-height:     40px;
       border-radius: 0 17px 17px 0;
       z-index: 9;
 
-      @include tablet {
-        background-color: $brand-success;
-      }
-
-      @include desktop {
+      @include tablet-and-desktop {
         background-color: $brand-success;
       }
     }

@@ -1,5 +1,16 @@
 @import 'app/stylesheet/variables';
+@import 'app/stylesheet/mixins/media';
 
 .container {
   display: flex;
+}
+
+.main {
+  @include tablet {
+    padding: 10px;
+  }
+
+  @include desktop {
+    padding: 20px;
+  }
 }

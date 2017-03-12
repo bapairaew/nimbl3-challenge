@@ -1,20 +1,32 @@
 @import 'app/stylesheet/variables';
+@import 'app/stylesheet/mixins/media';
 
 .container {
   padding: 17px 0;
+  text-align: center;
+
+  @include tablet-and-desktop {
+    text-align: left;
+  }
 
   .title {
     font-size: 24px;
     font-weight: bold;
-    text-align: center;
     line-height: 29px;
     color: $gray;
+
+    @include tablet-and-desktop {
+      font-size: 16px;
+    }
   }
 
   .subtitle {
     font-size: 14px;
-    text-align: center;
     line-height: 18px;
     color: $light-gray;
+
+    @include tablet-and-desktop {
+      font-size: 12px;
+    }
   }
 }

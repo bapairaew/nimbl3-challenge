@@ -1,0 +1,23 @@
+@import 'app/stylesheet/variables';
+
+.fullRemark {
+
+  .well {
+    background: #fff;
+  }
+
+  .header {
+    font-size: 14px;
+    line-height: 18px;
+    color: $gray;
+    margin: 10px 0;
+  }
+
+  .paragraph {
+    font-size: 13px;
+    line-height: 18px;
+    color: $light-gray;
+    margin: 0  0 4px 0;
+    font-weight: 300;
+  }
+}

@@ -1,11 +1,19 @@
 @import 'app/stylesheet/variables';
+@import 'app/stylesheet/mixins/media';
 
 $padding: 20px;
-$lineHeight: 32px;
+$iconHeight: 32px;
+
+$tabletPadding: 17px;
+$tabletIconHeight: 24px;
 
 .container {
   position: relative;
-  height: $padding * 2 + $lineHeight;
+  height: $padding * 2 + $iconHeight;
+
+  @include tablet-and-desktop {
+    height: $tabletPadding * 2 + $tabletIconHeight;
+  }
 
   .shadow {
     position: fixed;
@@ -24,9 +32,18 @@ $lineHeight: 32px;
     position: absolute;
     width: 100%;
 
+    @include tablet-and-desktop {
+      padding: $tabletPadding;
+    }
+
     .icon {
-      width: 32px;
-      height: 32px;
+      width: $iconHeight;
+      height: $iconHeight;
+
+      @include tablet-and-desktop {
+        width: $tabletIconHeight;
+        height: $tabletIconHeight;
+      }
     }
 
     .iconFocused {
@@ -37,7 +54,11 @@ $lineHeight: 32px;
       margin-left: 10px;
       flex-grow: 1;
       font-size: 18px;
-      line-height: $lineHeight;
+
+      @include tablet-and-desktop {
+        font-size: 12px;
+        line-height: 15px;
+      }
     }
 
     .suggestions {

@@ -1,4 +1,17 @@
 @import 'app/stylesheet/variables';
+@import 'app/stylesheet/mixins/media';
+
+.card {
+  @include tablet-and-desktop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 11px;
+    padding: 10px;
+    width: 360px;
+    z-index: 9;
+  }
+}
 
 .block {
   padding: 10px 0;
@@ -10,6 +23,10 @@
 
 .control {
   text-align: center;
+
+  @include tablet-and-desktop {
+    font-size: 10px;
+  }
 }
 
 .taxCol {
@@ -19,6 +36,16 @@
 .tax {
   width: 40px;
   display: inline-block;
+
+  @include tablet-and-desktop {
+    width: 25px;
+  }
+
+  .control {
+    @include tablet-and-desktop {
+      padding: 1px;
+    }
+  }
 }
 
 .percentage {
@@ -35,6 +62,10 @@
   line-height: 19px;
   color: $light-gray;
   padding: 10px 0;
+
+  @include tablet-and-desktop {
+    font-size: 12px;
+  }
 }
 
 .total {
@@ -43,6 +74,10 @@
   line-height: 29px;
   color: $gray;
   padding: 4px 0;
+
+  @include tablet-and-desktop {
+    font-size: 16px;
+  }
 }
 
 .totalLabel {

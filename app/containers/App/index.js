@@ -15,6 +15,7 @@ import Company from 'components/Company';
 import Section from 'components/Section';
 import UpdateOrderForm from './components/UpdateOrderForm';
 import CalculationCard from './components/CalculationCard';
+import TopBar from './components/TopBar';
 import MainSection from './components/MainSection';
 import Icon from 'components/Icon';
 import { select } from './reducer';
@@ -49,18 +50,21 @@ const App = ({ user, order, isSidebarOpened, openSidebar, closeSidebar }) => (
         onSearchClick={() => { console.log('Search clicked!') }}>
         Edit {order.id}
       </AppBar>
-      <Card>
-        <Company {...order.company} />
-      </Card>
-      <Section>
-        <UpdateOrderForm {...order} />
-      </Section>
-      <Section>
-        <CalculationCard {...order} />
-      </Section>
-      <Section>
-        <MainSection {...order} />
-      </Section>
+      <TopBar className={'visible-sm visible-md visible-lg'} {...user} />
+      <div className={styles.main}>
+        <Card className={'visible-xs'}>
+          <Company {...order.company} />
+        </Card>
+        <Section>
+          <UpdateOrderForm {...order} />
+        </Section>
+        <Section>
+          <CalculationCard {...order} />
+        </Section>
+        <Section>
+          <MainSection {...order} />
+        </Section>
+      </div>
     </MainContainer>
   </div>
 );

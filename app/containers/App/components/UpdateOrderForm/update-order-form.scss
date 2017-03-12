@@ -1,0 +1,52 @@
+@import 'app/stylesheet/variables';
+@import 'app/stylesheet/mixins/media';
+
+.form {
+  padding: 0 10px;
+
+  @include tablet-and-desktop {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+
+.company {
+  flex-grow: 1;
+}
+
+.well {
+  flex-grow: 1;
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+
+  @include tablet-and-desktop {
+    background-color: #fff;
+    padding: 0 10px;
+    border: 1px solid $border-color;
+  }
+}
+
+.subForm {
+  @include tablet-and-desktop {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.link {
+  color: $gray;
+}
+
+.dropdownGroup {
+  @include tablet-and-desktop {
+    text-align: center;
+    padding: 0 20px !important;
+
+    &:not(:last-child) {
+      border-right: 1px solid $border-color;
+    }
+  }
+}

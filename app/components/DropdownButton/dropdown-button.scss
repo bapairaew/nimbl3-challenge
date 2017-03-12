@@ -1,5 +1,11 @@
+@import 'app/stylesheet/mixins/media';
+
 .dropdown {
   display: flex !important;
   align-items: center;
   justify-content: space-between;
+
+  @include tablet-and-desktop {
+    padding: 5px 12px !important;
+  }
 }

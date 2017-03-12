@@ -1,6 +1,17 @@
 @import 'app/stylesheet/variables';
+@import 'app/stylesheet/mixins/media';
 
 .section {
   padding: 26px 0;
   border-bottom: 1px solid transparentize($lighter-gray, 0.8);
+
+  @include tablet {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  @include desktop {
+    padding: 0;
+    border-bottom: none;
+  }
 }

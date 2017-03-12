@@ -64,7 +64,7 @@ class AutoSuggest extends React.Component {
         { isFocused && <div className={styles.shadow}></div> }
         <div className={styles.autoSuggest}>
           { !loading && <Icon className={classSet(styles.icon, isFocused && styles.iconFocused)} glyph="IconPlus" /> }
-          { loading && <Loading /> }
+          { loading && <Loading className={classSet(styles.icon)} /> }
           <NakedInput className={styles.input} type="text" placeholder="Add Products"
             onChange={() => this.handleChange()}
             onFocus={() => this.setState({ isFocused: true })}

@@ -9,13 +9,13 @@ const initialState = {
     id: 'ORD07070707',
     company: {
       name: 'CPF Saraburi',
-      address: 'Highway 2, Kaeng Koi Saraburi Thailand'
+      address: 'Highway 2, Kaeng Koi Saraburi Thailand',
+      phone: '+66 087 348 79 34'
     },
     createdBy: 'Tom Hanks',
     status: 'Pending',
     estimatedDeliveryDate: '14-04-2015',
     type: 'Retailers',
-    phone: '+66 087 348 79 34',
     subTotal: 40033,
     shipping: 0,
     discount: 9999.999,
