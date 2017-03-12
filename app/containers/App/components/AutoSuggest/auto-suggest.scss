@@ -1,0 +1,86 @@
+@import 'app/stylesheet/variables';
+
+$padding: 20px;
+$lineHeight: 32px;
+
+.container {
+  position: relative;
+  height: $padding * 2 + $lineHeight;
+
+  .shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparentize(#333, 0.3);
+  }
+
+  .autoSuggest {
+    padding: $padding;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    position: absolute;
+    width: 100%;
+
+    .icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    .iconFocused {
+      transform: rotate(45deg);
+    }
+
+    .input {
+      margin-left: 10px;
+      flex-grow: 1;
+      font-size: 18px;
+      line-height: $lineHeight;
+    }
+
+    .suggestions {
+      background-color: #fff;
+      position: absolute;
+      top: calc(100% + 2px);
+      width: 100%;
+      left: 0;
+      border-radius: 0 0 3px 3px;
+
+      .suggestion {
+        display: flex;
+        padding: 21px 4px;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $table-border-color;
+
+        > div {
+          font-size: 11px;
+          line-height: 14px;
+          color: $light-gray;
+          padding: 0 10px;
+        }
+
+        > div:first-child {
+          font-size: 12px;
+          line-height: 15px;
+          color: $gray;
+        }
+
+        .controls {
+          white-space: nowrap;
+          display: flex;
+          align-items: center;
+        }
+
+        .control {
+          width: 30px;
+          text-align: center;
+          display: inline-block;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
