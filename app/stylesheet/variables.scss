@@ -10,7 +10,22 @@ $header-height:             70px;
 
 $app-bar-height:            50px;
 
-$subtitle-color:            #626272;
+$gray:                      #626272;
+$light-gray:                #8899AA;
+$lighter-gray:              #979797;
+
+$btn-default-color:         $light-gray;
+$btn-font-weight:           300;
+
+$font-size-large:           14px;
+
+$padding-large-vertical:    15px;
+
+$border-radius-base:        2px;
+$border-radius-large:       3px;
+
+$input-color:               #C9C9C9;
+$input-border:              $light-gray;
 
 $menu-icon-color:           #EB8B2D;
 

@@ -1,0 +1,52 @@
+@import 'app/stylesheet/variables';
+
+.block {
+  padding: 10px 0;
+
+  &:not(:first-child) {
+    border-top: 1px solid #F1F0F4;
+  }
+}
+
+.control {
+  text-align: center;
+}
+
+.taxCol {
+  white-space: nowrap;
+}
+
+.tax {
+  width: 40px;
+  display: inline-block;
+}
+
+.percentage {
+  margin-left: 4px;
+}
+
+.taxTail {
+  margin-left: 10px;
+}
+
+.subTotal {
+  font-size: 16px;
+  text-align: right;
+  line-height: 19px;
+  color: $light-gray;
+  padding: 10px 0;
+}
+
+.total {
+  font-size: 24px;
+  text-align: right;
+  line-height: 29px;
+  color: $gray;
+  padding: 4px 0;
+}
+
+.totalLabel {
+  font-size: 16px;
+  line-height: 19px;
+  color: #626272;
+}

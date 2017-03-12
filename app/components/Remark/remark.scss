@@ -1,0 +1,22 @@
+@import 'app/stylesheet/variables';
+
+.remark {
+  background-color: #fff;
+  padding: 8px 11px;
+  font-weight: 300;
+
+  .header {
+    font-size: 14px;
+    line-height: 18px;
+    color: $gray;
+    margin: 4px 0;
+    font-weight: 300;
+  }
+
+  .paragraph {
+    font-size: 13px;
+    line-height: 18px;
+    color: $light-gray;
+    margin: 0  0 4px 0;
+  }
+}
